@@ -18,7 +18,15 @@ $(function(){
 		event.preventDefault();
 		//
 		console.log( 'files' );
-		console.log( event );
+		//console.log( event );
+		//console.log( event.target );
+		//console.log( event.target );
+		//console.log( event.target.files );
+		var aFiles = event.target.files;
+		var selectedFile = aFiles[0];
+
+		console.log( selectedFile );
+
 		//
 		return false
 	}
