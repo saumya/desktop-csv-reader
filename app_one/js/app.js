@@ -11,6 +11,18 @@ $(function(){
 		//
 		return false;
 	}
+	var onChangeSelectFile = function(event){
+		console.log('onChangeSelectFile');
+		//
+		event.stopPropagation();
+		event.preventDefault();
+		//
+		console.log( 'files' );
+		console.log( event );
+		//
+		return false
+	}
 	//
-	$('#btn_choose_file').on('click', onChooseFile);
+	//$('#btn_choose_file').on('click', onChooseFile);
+	$('#id_file_input').on('change', onChangeSelectFile);
 })// end jQuery.ready
