@@ -24,3 +24,18 @@ Start the appication
 ```
 npm start
 ```
+
+### Libs
+
+ - [Papaparse][lib-papaparse] for CSV parsing
+
+
+
+
+
+
+[lib-papaparse]: https://github.com/mholt/PapaParse
+
+
+
+
