@@ -7,19 +7,40 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" type="text/css" href="css/bulma.css">
 
-    <script type="text/javascript" src="js/libs/papaparse.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <!--
+    ref: https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined 
+    -->
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
+    <script type="text/javascript" src="js/libs/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/libs/papaparse.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+
+    <script type="text/javascript" src="js/app.js"></script> 
+    
   </head>
   <body>
-    
-    <h1>App | One</h1>
-    <ul>
-      <li>Node <script>document.write(process.versions.node)</script> </li>
-      <li>Chrome <script>document.write(process.versions.chrome)</script> </li>
-      <li>Electron <script>document.write(process.versions.electron)</script> </li>
-    </ul>
-    <h3>Tech stack.</h3>
 
+    <p>Not loaded yet.</p>
+
+    <div class="container">
+      <div class="notification">
+        <h1>App | One</h1>
+        <!--
+        <div>
+          Node <strong> <script>document.write(process.versions.node)</script> </strong> |
+          Chrome <strong> <script>document.write(process.versions.chrome)</script> </strong> |
+          Electron <strong> <script>document.write(process.versions.electron)</script> </strong>
+        </div>
+        -->
+        <h3>Tech stack.</h3>
+      </div>
+    </div>
+    <div id="my-app" class="container">
+      Helo
+    </div>
   </body>
 </html>
