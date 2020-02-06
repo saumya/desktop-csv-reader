@@ -19,7 +19,8 @@ const AppUtil = function(){
 		//
 		$("#jsGrid").jsGrid({
 			width: "100%",
-			height: "400px",
+			height: "300px",
+			sorting: true,
 			data: data,
 			fields: [
 				{ name:'paid To' },
