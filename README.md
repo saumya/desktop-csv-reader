@@ -37,7 +37,7 @@ npm start
 
 ### Packaging
 
-This is done manually now as per the `Electron` documents.
+This is done manually now as per the `Electron` [documents][electron-dist-manual].
 
 
 
@@ -46,6 +46,8 @@ This is done manually now as per the `Electron` documents.
 
 [lib-papaparse]: https://github.com/mholt/PapaParse
 [lib-js-grid]:http://js-grid.com/docs/
+
+[electron-dist-manual]: https://www.electronjs.org/docs/tutorial/application-distribution#manual-distribution
 
 
 
