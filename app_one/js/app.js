@@ -2,11 +2,32 @@
 console.log('App Entry');
 console.log('App Entry : LoDash=', _.VERSION );
 console.log('App Entry : jQuery=', $.fn.jquery );
+console.log('App Entry : jsGrid=', jsGrid.version );
 //
 const AppUtil = function(){
 	const parseAllData = function(data){
 		console.log('parseAllData');
+		//debugger;
+		//console.log(data);
+		
+		//var headerObj = data[0];
+		var headerObj = data.splice(0,1); //removing the first object
+
+		//console.log(headerObj);
+		//console.log(aData);
 		console.log(data);
+		//
+		$("#jsGrid").jsGrid({
+			width: "100%",
+			height: "400px",
+			data: data,
+			fields: [
+				{ name:'paid To' },
+				{ name:'paid On' },
+				{ name:'paid For' },
+				{ name:'ammount' }
+			]
+		});
 	}
 	return({
 		parseAllData
@@ -48,6 +69,7 @@ $(function(){
 
 		//Papa.parse(selectedFile);
 		Papa.parse(selectedFile,{
+			header: true,
 			complete: function(results, file) {
 				//console.log("Parsing complete:", results, file);
 				//console.log(results.data);

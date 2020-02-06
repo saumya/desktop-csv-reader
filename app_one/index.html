@@ -6,6 +6,8 @@
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/jsgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jsgrid-theme.min.css">
 
     <!--
     ref: https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined 
@@ -15,6 +17,7 @@
 
     <script type="text/javascript" src="js/libs/lodash_4.17.15.js"></script>
     <script type="text/javascript" src="js/libs/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/libs/jsgrid.js"></script>
     <script type="text/javascript" src="js/libs/papaparse.js"></script>
 
     <!-- Insert this line after script imports -->
@@ -52,6 +55,14 @@
           <!-- <button id="btn_choose_file" class="button">Choose your file</button> -->
         </div>
       </section>
+
+      <section class="section">
+        <div class="container">
+          <div id="jsGrid"> js grid </div>    
+        </div>
+      </section>
+      
+      
        
     </div>
     
