@@ -1,8 +1,22 @@
 //
 console.log('App Entry');
-
+console.log('App Entry : LoDash=', _.VERSION );
+console.log('App Entry : jQuery=', $.fn.jquery );
+//
+const AppUtil = function(){
+	const parseAllData = function(data){
+		console.log('parseAllData');
+		console.log(data);
+	}
+	return({
+		parseAllData
+	});
+}; // AppUtil /
+//jQuery
 $(function(){
 	console.log('jquery:ready');
+	//
+	const appUtil = AppUtil();
 	//
 	var onChooseFile = function(event){
 		event.stopPropagation();
@@ -39,7 +53,8 @@ $(function(){
 				//console.log(results.data);
 				//console.log(results.errors);
 				console.log(results.meta);
-				onGotData(results.data);
+				//onGotData(results.data);
+				appUtil.parseAllData( results.data );
 			}
 		})
 		
@@ -56,3 +71,6 @@ $(function(){
 	//$('#btn_choose_file').on('click', onChooseFile);
 	$('#id_file_input').on('change', onChangeSelectFile);
 })// end jQuery.ready
+
+
+//
